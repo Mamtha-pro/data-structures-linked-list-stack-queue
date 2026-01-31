@@ -2,6 +2,14 @@ package linkedlist;
 
 import linkedliststack.Stack;
 import linkedlistqueue.Queue;
+import middlelinkedlist.FindMiddle;
+
+
+import static floydcycle.DetectLoop.detectloop;
+import static middlelinkedlist.FindMiddle.printmiddle;
+import static reverselinkedlist.ReverseLinkedList.printList;
+import static reverselinkedlist.ReverseLinkedList.reverse;
+import static middlelinkedlist.FindMiddle.middlelinkedlist;
 
 
 public class Main {
@@ -32,5 +40,24 @@ public class Main {
         q.display();
         q.dequeue();
         q.display();
+
+
+
+        System.out.println("Original Linked List:");
+        printList(l.head);
+
+        l.head = reverse(l.head);
+
+        System.out.println("Reversed Linked List:");
+        printList(l.head);
+
+        l.head = middlelinkedlist(l.head);
+
+        System.out.println("Middle of  Linked List: ");
+        printmiddle(l.head);
+
+        System.out.println("DetectLoop in  Linked List: ");
+       l.head = detectloop(l.head);
     }
 }
+

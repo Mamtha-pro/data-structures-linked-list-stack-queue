@@ -2,25 +2,26 @@ package linkedlist;
 
 public class LinkedList1 {
 
-    private Node head;
+    public Node head;
 
     public LinkedList1() {
         head = null;
     }
 
-    // isEmpty
+
     public boolean isEmpty() {
+
         return head == null;
     }
 
-    // insertFirst
+
     public void insertFirst(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
         head = newNode;
     }
 
-    // insertLast
+
     public void insertLast(int data) {
         Node newNode = new Node(data);
 
@@ -36,7 +37,6 @@ public class LinkedList1 {
         temp.next = newNode;
     }
 
-    // insertAtPosition
     public void insertAtPosition(int data, int pos) {
         if (pos == 1) {
             insertFirst(data);
@@ -58,7 +58,7 @@ public class LinkedList1 {
         temp.next = newNode;
     }
 
-    // removeFirst
+
     public void removeFirst() {
         if (isEmpty()) {
             System.out.println("List is empty");
@@ -67,7 +67,7 @@ public class LinkedList1 {
         head = head.next;
     }
 
-    // removeLast
+
     public void removeLast() {
         if (isEmpty()) {
             System.out.println("List is empty");
@@ -86,7 +86,7 @@ public class LinkedList1 {
         temp.next = null;
     }
 
-    // removeAtPosition
+
     public void removeAtPosition(int pos) {
         if (pos == 1) {
             removeFirst();
@@ -104,7 +104,7 @@ public class LinkedList1 {
         temp.next = temp.next.next;
     }
 
-    // display
+
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -114,7 +114,7 @@ public class LinkedList1 {
         System.out.println("null");
     }
 
-    // count
+
     public int count() {
         int c = 0;
         Node temp = head;
